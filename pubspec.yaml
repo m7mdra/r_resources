@@ -1,6 +1,6 @@
 name: r_resources
 description: Builder package for generating R file which contains project asset references
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/scrinoman/r_resources
 
 environment:

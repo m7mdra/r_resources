@@ -1,4 +1,4 @@
-## [Unreleased]
+## [1.0.3] - 16.10.2026.
 
 * Fixed generated doc-comment asset links baking in the local machine's
   absolute filesystem path, which turned every `r.dart` into unwanted diff
