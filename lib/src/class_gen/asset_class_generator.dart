@@ -18,6 +18,13 @@ abstract class AssetClassGenerator implements ClassGenerator {
   @protected
   List<AssetId> get assets;
 
+  /// Directory (relative to the package root) the generated class is
+  /// written into. Used to turn each asset path into a preview link
+  /// relative to the generated file, so the generated source is identical
+  /// no matter which machine or CI runner produced it.
+  @protected
+  String get outputDirectory;
+
   @override
   FutureOr<String> generate() {
     final classBuffer = StringBuffer()
@@ -32,7 +39,9 @@ abstract class AssetClassGenerator implements ClassGenerator {
           final assetPath = asset.path;
           classBuffer
             ..writeln()
-            ..writeln('  /// ![](${absolute(assetPath)})')
+            ..writeln(
+              '  /// ![](${relative(assetPath, from: outputDirectory)})',
+            )
             ..writeln('  final $propertyName = r\'$assetPath\';');
         }
       }

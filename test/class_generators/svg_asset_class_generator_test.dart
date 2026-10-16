@@ -42,13 +42,13 @@ void main() {
         'class ${generator.className} {\n'
         '  const ${generator.className}();\n'
         '\n'
-        '  /// ![](${absolute('assets/svg/ic_one.svg')})\n'
+        '  /// ![](${relative('assets/svg/ic_one.svg', from: 'lib')})\n'
         '  final ic_one = r\'assets/svg/ic_one.svg\';\n'
         '\n'
-        '  /// ![](${absolute('assets/svg/ic_two.svg')})\n'
+        '  /// ![](${relative('assets/svg/ic_two.svg', from: 'lib')})\n'
         '  final ic_two = r\'assets/svg/ic_two.svg\';\n'
         '\n'
-        '  /// ![](${absolute('assets/svg/ic_three.svg')})\n'
+        '  /// ![](${relative('assets/svg/ic_three.svg', from: 'lib')})\n'
         '  final ic_three = r\'assets/svg/ic_three.svg\';\n'
         '}',
       );
@@ -65,13 +65,13 @@ void main() {
         'class ${generator.className} {\n'
         '  const ${generator.className}();\n'
         '\n'
-        '  /// ![](${absolute('assets/svg/ic@one.svg')})\n'
+        '  /// ![](${relative('assets/svg/ic@one.svg', from: 'lib')})\n'
         '  final ic_one = r\'assets/svg/ic@one.svg\';\n'
         '\n'
-        '  /// ![](${absolute('assets/svg/ic\$two.svg')})\n'
+        '  /// ![](${relative('assets/svg/ic\$two.svg', from: 'lib')})\n'
         '  final ic_two = r\'assets/svg/ic\$two.svg\';\n'
         '\n'
-        '  /// ![](${absolute('assets/svg/ic!three.svg')})\n'
+        '  /// ![](${relative('assets/svg/ic!three.svg', from: 'lib')})\n'
         '  final ic_three = r\'assets/svg/ic!three.svg\';\n'
         '}',
       );

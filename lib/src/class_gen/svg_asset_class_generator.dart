@@ -5,10 +5,17 @@ import 'asset_class_generator.dart';
 
 /// AssetClassGenerator to create references to plain images
 class SvgAssetClassGenerator extends AssetClassGenerator {
-  /// Creates SvgAssetClassGenerator with specified list of assets
-  SvgAssetClassGenerator(this._assets);
+  /// Creates SvgAssetClassGenerator with specified list of assets.
+  ///
+  /// [outputDirectory] is the directory (relative to the package root)
+  /// that the generated class will be written into, defaulting to `lib`.
+  SvgAssetClassGenerator(this._assets, {this.outputDirectory = 'lib'});
 
   final List<AssetId> _assets;
+
+  @override
+  @protected
+  final String outputDirectory;
 
   @override
   String get className => '_SvgResources';

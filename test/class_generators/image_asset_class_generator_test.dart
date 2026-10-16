@@ -42,13 +42,13 @@ void main() {
         'class ${generator.className} {\n'
         '  const ${generator.className}();\n'
         '\n'
-        '  /// ![](${absolute('assets/images/ic_one.png')})\n'
+        '  /// ![](${relative('assets/images/ic_one.png', from: 'lib')})\n'
         '  final ic_one = r\'assets/images/ic_one.png\';\n'
         '\n'
-        '  /// ![](${absolute('assets/images/ic_two.png')})\n'
+        '  /// ![](${relative('assets/images/ic_two.png', from: 'lib')})\n'
         '  final ic_two = r\'assets/images/ic_two.png\';\n'
         '\n'
-        '  /// ![](${absolute('assets/images/ic_three.png')})\n'
+        '  /// ![](${relative('assets/images/ic_three.png', from: 'lib')})\n'
         '  final ic_three = r\'assets/images/ic_three.png\';\n'
         '}',
       );
@@ -65,13 +65,13 @@ void main() {
         'class ${generator.className} {\n'
         '  const ${generator.className}();\n'
         '\n'
-        '  /// ![](${absolute('assets/images/ic@one.png')})\n'
+        '  /// ![](${relative('assets/images/ic@one.png', from: 'lib')})\n'
         '  final ic_one = r\'assets/images/ic@one.png\';\n'
         '\n'
-        '  /// ![](${absolute('assets/images/ic\$two.png')})\n'
+        '  /// ![](${relative('assets/images/ic\$two.png', from: 'lib')})\n'
         '  final ic_two = r\'assets/images/ic\$two.png\';\n'
         '\n'
-        '  /// ![](${absolute('assets/images/ic!three.png')})\n'
+        '  /// ![](${relative('assets/images/ic!three.png', from: 'lib')})\n'
         '  final ic_three = r\'assets/images/ic!three.png\';\n'
         '}',
       );

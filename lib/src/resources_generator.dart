@@ -158,10 +158,18 @@ class ResourcesBuilder implements Builder {
       pubSpecYamlMap,
     );
 
-    final imagesClassGenerator = ImageAssetClassGenerator(assets);
+    final outputDirectory = options.path;
+
+    final imagesClassGenerator = ImageAssetClassGenerator(
+      assets,
+      outputDirectory: outputDirectory,
+    );
     final imageResourcesClass = await imagesClassGenerator.generate();
 
-    final svgClassGenerator = SvgAssetClassGenerator(assets);
+    final svgClassGenerator = SvgAssetClassGenerator(
+      assets,
+      outputDirectory: outputDirectory,
+    );
     final svgResourcesClass = await svgClassGenerator.generate();
 
     late StringsClassGenerator stringsClassGenerator;
